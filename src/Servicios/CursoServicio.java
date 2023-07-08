@@ -27,23 +27,22 @@ public class CursoServicio {
         System.out.println("Ingrese el turno");
         String turno = scan.next();
         while (!(turno.equals("maniana") || turno.equals("tarde"))) {
-            if (turno.equals("maniana") || turno.equals("tarde")) {
-                curso.setTurno(turno);
-            } else {
-                System.out.println("Te confundiste, intenta de nuevo");
-                turno = scan.next();
-            }
+            System.out.println("Te confundiste, intenta de nuevo");
+            turno = scan.next();
         }
+        curso.setTurno(turno);
+
         System.out.println("Ingrese el precio por hora");
         curso.setPrecioPorHora(scan.nextInt());
         curso.setAlumnos(cargarAlumnos());
         return curso;
     }
-    public int calcularGananciaSemanal(Curso curso){
+
+    public int calcularGananciaSemanal(Curso curso) {
         int horas = curso.getCantidadHorasPorDia();
         int precioHora = curso.getPrecioPorHora();
         int cantAlumnos = curso.getAlumnos().length;
         int cantDias = curso.getCantidadDiasPorSemana();
-        return horas*precioHora*cantAlumnos*cantDias;
+        return horas * precioHora * cantAlumnos * cantDias;
     }
 }

@@ -17,6 +17,7 @@ public class ej13Curso {
         System.out.println("");
 
         System.out.println("La ganancia semanal del curso '" + curso.getNombreCurso() + "' es de: " + cs.calcularGananciaSemanal(curso));
+        System.out.println(curso.toString());
     }
 
 }
