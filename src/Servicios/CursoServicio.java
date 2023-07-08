@@ -24,7 +24,7 @@ public class CursoServicio {
         curso.setCantidadHorasPorDia(scan.nextInt());
         System.out.println("Ingrese la cantidad de dias por semana");
         curso.setCantidadDiasPorSemana(scan.nextInt());
-        System.out.println("Ingrese el turno");
+        System.out.println("Ingrese el turno ('maniana' / 'tarde')");
         String turno = scan.next();
         while (!(turno.equals("maniana") || turno.equals("tarde"))) {
             System.out.println("Te confundiste, intenta de nuevo");
